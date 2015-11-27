@@ -3,6 +3,8 @@
 html {
 	height: 100%;
 }
+
+
 body, p, h1, h2, h3, h4, h5, div, ul, li, ol {
 	margin: 0;
 	padding: 0;
@@ -13,7 +15,6 @@ body {
 	line-height: 1.4em;
 	color: #FFF;
 	background: url(images/flowerfarm.jpg) no-repeat center;
-	;
 	background-size: cover;
 }
 #container-outer {
@@ -37,7 +38,9 @@ h2, h3, h4, h5, p, ul, ol {
 	margin-bottom: .5em;
 }
 h1 {
-	line-height: 1.2em;
+	font-family:"Lobster", Verdana, Arial, Helvetica, sans-serif;
+	font-size:3em;
+	line-height: 1.4em;
 	margin-bottom: 1em;
 }
 h2 {
