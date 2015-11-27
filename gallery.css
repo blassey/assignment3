@@ -54,10 +54,10 @@ h2 {
 	float: right;
 	width: 205px;
 }
-img.thumbnail {
+a.thumbnail img {
 	width: 100px;
 }
-img.thumbnail:hover {
+a.thumbnail:hover img {
 	opacity: 0.5;
 }
 .clearAll {
