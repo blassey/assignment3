@@ -5,6 +5,7 @@ $(document).ready(function() {
 	var cache = {};                      // Cache object
 	var $frame = $('#mainImage');     // Container for image
 	var $thumbs = $('.thumbnail');           // Thumbnails
+	var $currentThumb;
 	
 	function crossfade($img) {           // Function to fade between images
 										 // Pass in new image as parameter
@@ -26,6 +27,8 @@ $(document).ready(function() {
 		  request = src;                      // Store latest image request
 	  
 	  e.preventDefault();                     // Stop default link behavior
+	  
+	  $currentThumb = $(this);				//store current thumbnail
 	  
 	  $thumbs.removeClass('active');          // Remove active from all thumbs
 	  $(this).addClass('active');             // Add active to clicked thumb
@@ -63,7 +66,31 @@ $(document).ready(function() {
 	  }
 	
 	});
+	$('#next').on('click', function(){
+		var $nextItem = $currentThumb.next();
+	    
+		if($nextItem.length > 0) {
+    			$nextItem.click(); 
+			}
+			else {
+ 			   $currentThumb.siblings().first().click();
+			}
+		});
+		
+	$('#previous').on('click',function(){
+		var $prevItem = $currentThumb.prev();
+	    $prevItem.click(); 
+		
+		if($prevItem.length > 0) {
+    			$prevItem.click(); 
+			}
+			else {
+ 			   $currentThumb.siblings().last().click();
+			}
 	
+		});
+		
+		
 	// Final line runs once when rest of script has loaded to show the first image
 	$('.thumbnail').eq(0).click();                // Simulate click on first thumb
 

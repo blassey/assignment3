@@ -44,6 +44,7 @@ h2 {
 /********** MAIN PICTURE **********/
 img {
 	border: 0;
+	width:100%;
 }
 
 #mainImage {
