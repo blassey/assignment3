@@ -10,17 +10,26 @@
 
 <body>
 <div id="container">
-  <h1>Jig-Bee Flower Farm</h1>
+  <div id="header"><h1>Jig-Bee Flower Farm</h1></div>
+  <div id="filters">
+  	
+  	<button class="filter seeAll" data-filter="">See All</button>
+    <button class="filter red" data-filter="red">&nbsp;</button>
+    <button class="filter yellow" data-filter="yellow">&nbsp;</button>
+    <button class="filter white" data-filter="white">&nbsp;</button>
+	<button class="filter pink" data-filter="pink">&nbsp;</button>
+    <p class="filter">Filter by color:</p> 
+  </div>
   <div id="mainImage"></div>
   <div id="queue"> 
-  	<a href="images/flower1.jpg" class="thumbnail active" title="flower1"><img src="images/flower1-thumb.jpg" alt="flower1"></a> 
-    <a href="images/flower2.jpg" class="thumbnail" title="flower2"><img src="images/flower2-thumb.jpg" alt="flower2"></a> 
-    <a href="images/flower3.jpg" class="thumbnail" title="flower3"><img src="images/flower3-thumb.jpg" alt="flower3"></a> 
-    <a href="images/flower4.jpg" class="thumbnail" title="flower4"><img src="images/flower4-thumb.jpg" alt="flower4"></a> 
-    <a href="images/flower5.jpg" class="thumbnail" title="flower5"><img src="images/flower5-thumb.jpg" alt="flower5"></a> 
-    <a href="images/flower6.jpg" class="thumbnail" title="flower6"><img src="images/flower6-thumb.jpg" alt="flower6"></a> 
-    <a href="images/flower7.jpg" class="thumbnail" title="flower7"><img src="images/flower7-thumb.jpg" alt="flower7"></a> 
-    <a href="images/flower8.jpg" class="thumbnail" title="flower8"><img src="images/flower8-thumb.jpg" alt="flower8"></a> </div>
+  	<a href="images/flower1.jpg" class="thumbnail active" title="flower1"><img data-tags="red" src="images/flower1-thumb.jpg" alt="flower1"></a> 
+    <a href="images/flower2.jpg" class="thumbnail" title="flower2"><img data-tags="white" src="images/flower2-thumb.jpg" alt="flower2"></a> 
+    <a href="images/flower3.jpg" class="thumbnail" title="flower3"><img data-tags="pink,red,white" src="images/flower3-thumb.jpg" alt="flower3"></a> 
+    <a href="images/flower4.jpg" class="thumbnail" title="flower4"><img data-tags="yellow,red" src="images/flower4-thumb.jpg" alt="flower4"></a> 
+    <a href="images/flower5.jpg" class="thumbnail" title="flower5"><img data-tags="yellow" src="images/flower5-thumb.jpg" alt="flower5"></a> 
+    <a href="images/flower6.jpg" class="thumbnail" title="flower6"><img data-tags="pink" src="images/flower6-thumb.jpg" alt="flower6"></a> 
+    <a href="images/flower7.jpg" class="thumbnail" title="flower7"><img data-tags="pink" src="images/flower7-thumb.jpg" alt="flower7"></a> 
+    <a href="images/flower8.jpg" class="thumbnail" title="flower8"><img data-tags="red" src="images/flower8-thumb.jpg" alt="flower8"></a> </div>
   <div class="clearAll"></div>
   <div id="nav">
     <button id="previous">&laquo; Previous</button>
