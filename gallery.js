@@ -1,4 +1,4 @@
-// photo gallery
+ // photo gallery
 $(document).ready(function() {
     var request; // Latest image to be requested
     var $current; // Image currently being shown 
@@ -68,24 +68,31 @@ $(document).ready(function() {
     });
     $('#next').on('click', function() {
         var $nextItem = $currentThumb.next();
-
-        if ($nextItem.length > 0) {
-            $nextItem.click();
-        } else {
-            $currentThumb.siblings().first().click();
-        }
+		
+		while ($nextItem.children().is(":hidden") || $nextItem.length < 1) {
+        	if ($nextItem.length > 0) {
+            	$nextItem = $nextItem.next();
+       		 } else {
+            	$nextItem = $currentThumb.siblings().first();
+        	}
+		}
+		
+		$nextItem.click();
+		
     });
 
     $('#previous').on('click', function() {
         var $prevItem = $currentThumb.prev();
-        $prevItem.click();
 
-        if ($prevItem.length > 0) {
-            $prevItem.click();
-        } else {
-            $currentThumb.siblings().last().click();
-        }
-
+        while ($prevItem.children().is(":hidden") || $prevItem.length < 1) {
+        	if ($prevItem.length > 0) {
+            	$prevItem = $prevItem.prev();
+       		 } else {
+            	$prevItem = $currentThumb.siblings().last();
+        	}
+		}
+		
+		$prevItem.click();
     });
 
 
